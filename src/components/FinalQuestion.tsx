@@ -40,10 +40,12 @@ export const FinalQuestion: React.FC = () => {
             The Big Question
           </h2>
           <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-            Through all our moments together - the late-night gaming sessions,
-            the cooking adventures, and watching you care for others - I've
-            fallen more and more for you each day. You're amazing in every way,
-            and I can't imagine my life without you in it.
+            Through all the moments we've shared—our late-night gaming sessions,
+            the sweet cooking lessons over the phone, and the way you pour your
+            heart into caring for others, I’ve found myself falling for you more
+            and more each day. You’re genuinely amazing in every way, and I
+            honestly can’t imagine my life without you in it. You’ve become my
+            peace, my joy, and the person I look forward to every single day.
           </p>
           <motion.button
             onClick={() => setIsVisible(true)}
@@ -69,7 +71,7 @@ export const FinalQuestion: React.FC = () => {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
-              className="bg-white rounded-2xl p-8 max-w-lg mx-4 relative"
+              className="bg-white rounded-2xl p-4 sm:p-8 max-w-lg mx-4 relative overflow-y-auto max-h-[90vh]"
             >
               <button
                 onClick={() => setIsVisible(false)}
@@ -87,7 +89,7 @@ export const FinalQuestion: React.FC = () => {
                 <motion.h3
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-3xl font-bold text-gray-900 mb-4"
+                  className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4"
                 >
                   Will you be my girlfriend?
                 </motion.h3>
@@ -95,24 +97,19 @@ export const FinalQuestion: React.FC = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="text-gray-700 mb-8"
+                  className="text-sm sm:text-base text-gray-700 mb-6"
                 >
-                  Hey baby… I’ve been thinking about us a lot lately. About the
-                  laughs, the late-night talks, the moments of silence that
-                  still felt full, and even the tough days we’ve faced and grown
-                  through together. You bring a kind of light and calm into my
-                  life that I didn’t know I needed until I met you. Every moment
-                  with you feels like something I want to press pause on and
-                  replay over and over. From your voice that soothes me, to your
-                  strength and the way you care so deeply for the people you
-                  love—it's everything I admire. And through it all, I’ve come
-                  to realize something… I don’t just want to talk to you every
-                  day. I want to build something with you. I want to grow
-                  together, support each other, and make memories that will be
-                  ours forever. So, with my whole heart would you do me the
-                  honor of being my girlfriend?
+                  Hey baby… I've been thinking about us lately. About our
+                  laughs, late-night talks, and even the tough days we've grown
+                  through together. You bring light and calm into my life that I
+                  didn't know I needed. Every moment with you feels special.
+                  From your soothing voice to your strength and how deeply you
+                  care for others—it's everything I admire. I want to build
+                  something with you, grow together, and make memories that are
+                  ours forever. So, would you do me the honor of being my
+                  girlfriend?
                 </motion.p>
-                <div className="flex justify-center space-x-4">
+                <div className="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-3 sm:space-y-0">
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -124,9 +121,10 @@ export const FinalQuestion: React.FC = () => {
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className="px-6 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-all"
+                    onClick={handleYes}
+                    className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full shadow-xl hover:shadow-2xl transition-all"
                   >
-                    Let me think
+                    Of course I will! 💜
                   </motion.button>
                 </div>
               </div>
