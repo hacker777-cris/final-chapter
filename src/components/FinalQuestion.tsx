@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Heart, X, Sparkles } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Confetti from 'react-confetti';
+import React, { useState } from "react";
+import { Heart, X, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import Confetti from "react-confetti";
 
 export const FinalQuestion: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,8 +19,8 @@ export const FinalQuestion: React.FC = () => {
       });
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleYes = () => {
@@ -36,12 +36,14 @@ export const FinalQuestion: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <Heart className="h-16 w-16 text-rose-500 mx-auto mb-8" />
-          <h2 className="text-5xl font-bold text-gray-900 mb-8">The Big Question</h2>
+          <h2 className="text-5xl font-bold text-gray-900 mb-8">
+            The Big Question
+          </h2>
           <p className="text-xl text-gray-700 mb-12 leading-relaxed">
             Through all our moments together - the late-night gaming sessions,
-            the cooking adventures, and watching you care for others - I've fallen
-            more and more for you each day. You're amazing in every way, and I
-            can't imagine my life without you in it.
+            the cooking adventures, and watching you care for others - I've
+            fallen more and more for you each day. You're amazing in every way,
+            and I can't imagine my life without you in it.
           </p>
           <motion.button
             onClick={() => setIsVisible(true)}
@@ -95,8 +97,20 @@ export const FinalQuestion: React.FC = () => {
                   transition={{ delay: 0.3 }}
                   className="text-gray-700 mb-8"
                 >
-                  Every moment with you has been magical, and I want to make many more
-                  memories together. Would you do me the honor of being my girlfriend?
+                  Hey baby… I’ve been thinking about us a lot lately. About the
+                  laughs, the late-night talks, the moments of silence that
+                  still felt full, and even the tough days we’ve faced and grown
+                  through together. You bring a kind of light and calm into my
+                  life that I didn’t know I needed until I met you. Every moment
+                  with you feels like something I want to press pause on and
+                  replay over and over. From your voice that soothes me, to your
+                  strength and the way you care so deeply for the people you
+                  love—it's everything I admire. And through it all, I’ve come
+                  to realize something… I don’t just want to talk to you every
+                  day. I want to build something with you. I want to grow
+                  together, support each other, and make memories that will be
+                  ours forever. So, with my whole heart would you do me the
+                  honor of being my girlfriend?
                 </motion.p>
                 <div className="flex justify-center space-x-4">
                   <motion.button
@@ -156,3 +170,4 @@ export const FinalQuestion: React.FC = () => {
     </section>
   );
 };
+
